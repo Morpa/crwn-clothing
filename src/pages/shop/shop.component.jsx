@@ -10,6 +10,7 @@ import CollectionPageContainer from '../collection/collection.container';
 class ShopPage extends React.Component {
   componentDidMount() {
     const { fetchCollectionsStart } = this.props;
+
     fetchCollectionsStart();
   }
 
@@ -36,4 +37,7 @@ const mapDispatchToProps = dispatch => ({
   fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
 });
 
-export default connect(null, mapDispatchToProps)(ShopPage);
+export default connect(
+  null,
+  mapDispatchToProps
+)(ShopPage);
